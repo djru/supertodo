@@ -3,6 +3,7 @@
 body {
     padding-left: 20px;
     font-family: Avenir, Helvetica, sans;
+    margin-bottom: 200px
 }
 
 h1{
@@ -125,12 +126,12 @@ header {
 }
 
 #login-buttons {
-    position: absolute;
+    position: fixed;
     top: 15px;
     right: 122px;
     min-width: 165px;
 }
 
-a#login-sign-in-link {
+.login-link-text {
     float: right;
 }
