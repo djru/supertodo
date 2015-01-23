@@ -17,7 +17,7 @@ li{
 
 li label{
     display: inline-block;
-    width: 200px;
+    width: 400px;
 }
 
 .delete{
@@ -30,16 +30,20 @@ li label{
 .new-item input {
     font-size: 1.4em;
     padding: 2px;
-    width: 520px;
+    width: 587px;
 }
 
 h2 {
-    width: 400px;
+    width: 420px;
     display: inline-block;
 }
 
 .completed li label {
     text-decoration: line-through;
+}
+
+.all-completed, .clear-completed{
+	width: 170px;
 }
 
 h1 {
