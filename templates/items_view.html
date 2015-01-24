@@ -1,0 +1,25 @@
+<template name="items_view">
+<form class="new-item">
+	<input type="text" name="text" placeholder="{{#if currentUser}}Add a new task{{else}}Log In to Add Tasks{{/if}}" autofocus id="text-input">
+</form>
+{{# if currentUser}}
+	<h2>Uncompleted Items {{#if items_uncompleted_count_is_not_zero}}({{items_uncompleted_count}}){{/if}}</h2> <button class="all-completed">Mark All Completed</button>
+	<ul>
+	{{# each items_uncompleted}}
+		{{> item}}
+	{{else}}
+		<span class="message">It doesn't look like you have any uncompleted tasks.</span>
+	{{/each }}
+	</ul>
+	{{#if show_completed}}
+	<h2>Completed Items</h2> <button class="clear-completed">Clear Completed</button>
+	<ul class="completed">
+	{{# each items_completed}}
+		{{> item}}
+	{{else}}
+		<span class="message">It doesn't look like you have any completed tasks.</span>
+	{{/each }}
+	</ul>
+	{{/if}}
+{{/if}}
+</template>

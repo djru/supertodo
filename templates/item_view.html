@@ -1,0 +1,7 @@
+<template name="item">
+	<li class="{{#if checked}}checked{{/if}}">
+		<input type="checkbox" name="checked" checked="{{checked}}" id="{{_id}}" class="toggle-checked">
+  	<label for="{{_id}}">{{ text }}</label>
+  	<button class="delete">delete</button>
+  </li>
+</template>
