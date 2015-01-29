@@ -2,10 +2,10 @@ if (Meteor.isClient) {
 	Meteor.subscribe("items");
   Session.set("hide-completed", false);	
   Template.items_view.helpers({
-    items_completed: function(){return Items.find({checked: true, owner: Meteor.userId()}, {sort: {createdAt: -1}});},
-    items_uncompleted: function(){return Items.find({checked: false, owner: Meteor.userId()}, {sort: {createdAt: -1}});},
-    items_uncompleted_count: function(){return Items.find({checked: false, owner: Meteor.userId()}).count()},
-    items_uncompleted_count_is_not_zero: function(){Items.find({checked: false, owner: Meteor.userId()}).count() != 0},
+    items_completed: function(){return Items.find({checked: true, owner: Meteor.userId(), archived: {$ne: true}}, {sort: {createdAt: -1}});},
+    items_uncompleted: function(){return Items.find({checked: false, owner: Meteor.userId(), archived: {$ne: true}}, {sort: {createdAt: -1}});},
+    items_uncompleted_count: function(){return Items.find({checked: false, owner: Meteor.userId(), archived: {$ne: true}}).count()},
+    items_uncompleted_count_is_not_zero: function(){Items.find({checked: false, owner: Meteor.userId(), archived: {$ne: true}}).count() != 0},
     show_completed: function(){return !Session.get("hide-completed") }
   });
 
