@@ -1,0 +1,10 @@
+<template name="archived_view">
+{{# if currentUser}}
+	<h2>Archived Items</h2>
+	<ul>
+		{{# each items_archived}}
+			{{> item_archived}}
+		{{/each }}
+	</ul>
+{{/if}}
+</template>

@@ -1,18 +1,19 @@
-<head>
-  <title>To Dos</title>
-  <script src="//fast.eager.io/ybsn7Z1j8E9w.js"></script>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-</head>
+<template name="layout">
+	<head>
+		<title>To Dos</title>
+		<script src="//fast.eager.io/ybsn7Z1j8E9w.js"></script>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	</head>
 
-<body>
-	{{> header_view}}
-  <div class="main">
-		{{> items_view}}
-	</div>
-	{{> loginButtons}}
-	{{> settings_view}}
-	<div class="colophon">Made in Chicago by <a href="http://portfolio.danr.us">Dan Ruswick</a></div>
-</body>
-
+	<body>
+		{{> header_view}}
+		<div class="main">
+			{{> yield}}
+		</div>
+		{{> loginButtons}}
+		{{> settings_view}}
+		<div class="colophon">Made in Chicago by <a href="http://portfolio.danr.us">Dan Ruswick</a></div>
+	</body>
+</template>
 

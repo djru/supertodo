@@ -20,11 +20,18 @@ li label{
     width: 400px;
 }
 
-.delete{
+.delete, .unarchive{
     border: none;
     background: none;
-    color: red;
     text-decoration: underline;
+}
+
+.delete{
+    color: red;
+}
+
+.unarchive{
+    color: green;
 }
 
 .new-item input {
