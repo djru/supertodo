@@ -16,10 +16,12 @@ Router.configure({
 
 Router.route('/', function(){
 	this.render('items_view');
+	document.title = 'Super ToDo';
 });
 
 Router.route('/archived', function(){
 	this.render('archived_view');
+	document.title = 'Archived Items';
 });
 
 
